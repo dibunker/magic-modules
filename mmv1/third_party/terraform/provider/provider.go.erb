@@ -187,11 +187,13 @@ func DatasourceMap() map[string]*schema.Resource {
 }
 
 func DatasourceMapWithErrors() (map[string]*schema.Resource, error) {
+
 	return mergeResourceMaps(
 		handwrittenDatasources,
 		generatedIAMDatasources,
 		handwrittenIAMDatasources,
 	)
+
 }
 
 func ResourceMap() map[string]*schema.Resource {
